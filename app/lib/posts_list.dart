@@ -1,3 +1,4 @@
+import 'package:birb/post_item.dart';
 import 'package:flutter/material.dart';
 
 class PostList extends StatelessWidget {
@@ -7,14 +8,7 @@ class PostList extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView(
       children: _items.map((int item) {
-        return Card(
-          child: Container(
-            height: 300,
-            child: const Center(
-              child: Text('Item'),
-            ),
-          ),
-        );
+        return PostItem();
       }).toList(growable: false),
     );
   }
